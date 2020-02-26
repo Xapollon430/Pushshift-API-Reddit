@@ -7,7 +7,7 @@ function App() {
 	useEffect(() => {
 		const getPosts = async () => {
 			const rawFoodPornPosts = await fetch(
-				"http://api.pushshift.io/reddit/search/submission?subreddit=foodporn&after=1575072000&before=1582416000&size=80&sort_type=score&sort=desc"
+				"https://api.pushshift.io/reddit/search/submission?subreddit=foodporn&after=1575072000&before=1582416000&size=80&sort_type=score&sort=desc"
 			);
 			const jsonFoodPornPosts = await rawFoodPornPosts.json();
 
@@ -16,7 +16,7 @@ function App() {
 			});
 
 			const rawFoodPosts = await fetch(
-				"http://api.pushshift.io/reddit/search/submission?subreddit=food&after=1575072000&before=1582416000&size=50&sort_type=score&sort=desc"
+				"https://api.pushshift.io/reddit/search/submission?subreddit=food&after=1575072000&before=1582416000&size=50&sort_type=score&sort=desc"
 			);
 			const jsonFoodPosts = await rawFoodPosts.json();
 
